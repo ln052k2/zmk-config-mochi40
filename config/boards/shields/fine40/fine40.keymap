@@ -45,6 +45,5 @@
 				&trans    &trans     &trans     &trans     &trans     &kp HOME   &kp PG_UP  &kp PG_DN  &kp END
 			>;
 		};
-
 	};
 };

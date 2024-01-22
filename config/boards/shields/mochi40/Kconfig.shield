@@ -1,2 +1,0 @@
-config SHIELD_MOCHI40
-    def_bool $(shields_list_contains, mochi40)
