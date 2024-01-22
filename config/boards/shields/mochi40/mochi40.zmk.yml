@@ -1,6 +1,6 @@
 file_format: "1"
 id: mochi40
-name: Mochi40
+name: mochi40
 type: shield
 url: https://github.com/ln052k2/zmk-config-mochi40
 requires: [nice_nano_v2]
