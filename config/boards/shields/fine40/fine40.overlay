@@ -5,6 +5,7 @@
         zmk,kscan = &kscan0;
 		zmk,matrix-transform = &default_transform;
 		zephyr,display = &oled;
+	    zmk,battery = &vbatt;
     };
 
 	default_transform: keymap_transform_0 {
@@ -19,7 +20,7 @@
 		>;
 	};
 
-    kscan0: kscan_0 {
+	kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         diode-direction = "col2row";
@@ -44,20 +45,23 @@
 			, <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
-	
-		encoder: encoder {
-		compatible = "alps,ec11";
-		label = "ENCODER";
-		a-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-		b-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-		resolution = <4>;
-		status = "okay";
-	};
+	    vbatt: vbatt {
+        	compatible = "zmk,battery-nrf-vddh";
+    	};
 
-	sensors {
-		compatible = "zmk,keymap-sensors";
-		sensors = <&encoder>;
-	};
+		encoder: encoder {
+			compatible = "alps,ec11";
+			label = "ENCODER";
+			a-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+			b-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+			resolution = <4>;
+			status = "okay";
+		};
+
+		sensors {
+			compatible = "zmk,keymap-sensors";
+			sensors = <&encoder>;
+		};
 	
 };
 
