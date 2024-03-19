@@ -5,6 +5,7 @@
         zmk,kscan = &kscan0;
 		zmk,matrix-transform = &default_transform;
 		zephyr,display = &oled;
+		zmk,battery  
     };
 
 	default_transform: keymap_transform_0 {
@@ -45,7 +46,7 @@
             ;
     };
 	
-		encoder: encoder {
+	encoder: encoder {
 		compatible = "alps,ec11";
 		label = "ENCODER";
 		a-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
@@ -59,6 +60,9 @@
 		sensors = <&encoder>;
 	};
 	
+	vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
+    };
 };
 
 &pro_micro_i2c {

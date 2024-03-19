@@ -39,7 +39,7 @@
 
         layer2 {
 			bindings = <
-				&bootloader &sys_reset      &trans     &trans     &trans     &trans     &trans     &trans     &kp MINUS  &kp EQUAL   &kp LBKT   &kp RBKT   &kp BSPC
+				&bootloader  &sys_reset     	&trans     &trans     &trans     &trans     &trans     &kp MINUS  &kp EQUAL   &kp LBKT   &kp RBKT   &kp BSPC
 				&kp TAB   &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5) &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0) &trans
 				&kp LSHFT &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp C_PREV &kp C_NEXT &kp C_PP
 				&trans    &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans	  &trans 	 &trans
