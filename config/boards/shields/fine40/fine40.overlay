@@ -61,7 +61,7 @@
 	};
 	
 	vbatt: vbatt {
-        compatible = "zmk,battery-voltage-divider";
+        compatible = "zmk,battery-nrf-vddh";
     };
 };
 
